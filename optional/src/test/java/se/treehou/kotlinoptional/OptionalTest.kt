@@ -1,4 +1,4 @@
-package koptional.treehou.se.optional
+package se.treehou.kotlinoptional
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

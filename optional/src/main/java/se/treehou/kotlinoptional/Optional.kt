@@ -1,4 +1,4 @@
-package koptional.treehou.se.optional
+package se.treehou.kotlinoptional
 
 /**
  * Representation of a object that might have a value.
