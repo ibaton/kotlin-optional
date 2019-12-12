@@ -23,6 +23,12 @@ when(optional) {
 val value = optional.toNullable()
 ```
 
+### Map value
+```
+val value: Optional<Int> = Optional.Some("Optional")
+  .map { it.count() }
+```
+
 ## Install
 **Step 1.** Add it in your root build.gradle at the end of repositories:
 ```

@@ -24,6 +24,16 @@ sealed class Optional<out T>{
             is None -> null
         }
     }
+
+    /**
+     * Map value if Some
+     */
+    fun <Y : Any> map(function: (T)->Y): Optional<Y> {
+        return when(this){
+            is Some -> Some(function(value))
+            is None -> None
+        }
+    }
 }
 
 /**

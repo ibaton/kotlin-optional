@@ -8,9 +8,9 @@ class OptionalTest {
     @Test
     fun optional_someEquals() {
         val data = "Optional"
-        val optional = Optional.Some(data)
+        val optional: Optional.Some<String> = Optional.Some(data)
 
-        assertEquals(data, optional.value)
+        assertEquals(data, optional.toNullable())
     }
 
     @Test
@@ -49,5 +49,13 @@ class OptionalTest {
         val value = Optional.Some("Optional").toNullable()
 
         assertEquals("Optional", value)
+    }
+
+    @Test
+    fun optional_optionalMap() {
+        val value: Optional<String> = Optional.Some("Optional")
+        val mapedValue: Optional<Int> = value.map { it.count() }
+
+        assertEquals("Optional".count(), mapedValue.toNullable())
     }
 }
